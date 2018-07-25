@@ -20,7 +20,7 @@ import scrollIntoView from 'dom-scroll-into-view';
 /**
  * WordPress dependencies
  */
-import { __ } from '@wordpress/i18n';
+import { __, _x } from '@wordpress/i18n';
 import { Component, findDOMNode, createRef } from '@wordpress/element';
 import { withSpokenMessages, PanelBody } from '@wordpress/components';
 import { getCategories, isReusableBlock } from '@wordpress/blocks';
@@ -247,7 +247,7 @@ export class InserterMenu extends Component {
 
 					{ !! suggestedItems.length &&
 						<PanelBody
-							title={ __( 'Most Used' ) }
+							title={ _x( 'Most Used', 'blocks' ) }
 							opened={ isPanelOpen( 'suggested' ) }
 							onToggle={ this.onTogglePanel( 'suggested' ) }
 							ref={ this.bindPanel( 'suggested' ) }
